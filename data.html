@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Journey Data</title>
+</head>
+<body>
+    <div id="dataPage">
+        <h1>Your Journey Data</h1>
+        <p>Locations visited: <span id="locationsVisited"></span></p>
+        <p>Miles Walked: <span id="milesWalked"></span></p>
+        <p>Mood: <span id="mood"></span></p>
+        <p>Thoughts: <span id="thought"></span></p>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/turf@5/turf.min.js"></script>
+    <script>
+        // Function to get a parameter value from the URL
+        function getParameterByName(name, url) {
+            if (!url) url = window.location.href;
+            name = name.replace(/[\[\]]/g, '\\$&');
+            const regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)');
+            const results = regex.exec(url);
+            if (!results) return null;
+            if (!results[2]) return '';
+            return decodeURIComponent(results[2].replace(/\+/g, ' '));
+        }
+
+        const totalDistanceMeters = parseFloat(getParameterByName('distance'));
+        const totalDistanceMiles = (totalDistanceMeters * 0.000621371).toFixed(2);  // Convert meters to miles
+        document.getElementById('milesWalked').textContent = totalDistanceMiles + ' miles';
+
+        const thought = decodeURIComponent(getParameterByName('thought'));
+        document.getElementById('thought').textContent = thought;
+    </script>
+</body>
+</html>
+
+

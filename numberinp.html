@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unlock Manhattan: Enter Four Digits</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <div id="numberInputPage">
+        <h1>Unlock Manhattan: Enter Four Digits</h1>
+        <div class="input-section">
+            <select id="num1"></select>
+            <select id="num2"></select>
+            <select id="num3"></select>
+            <select id="num4"></select>
+            <br>
+            <button onclick="goToRoute()">Enter numbers</button>
+        </div>
+    </div>
+
+    <script>
+        function populateSelects() {
+            for (let i = 1; i <= 99; i++) {
+                const option = document.createElement('option');
+                option.value = i;
+                option.text = i;
+                document.getElementById('num1').add(option.cloneNode(true));
+                document.getElementById('num2').add(option.cloneNode(true));
+                document.getElementById('num3').add(option.cloneNode(true));
+                document.getElementById('num4').add(option.cloneNode(true));
+            }
+        }
+
+        populateSelects();
+    </script>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    
+</head>
+
+<body>
+    <div id="numberInputPage">
+        <h1>Unlock Manhattan: Enter Four Digits</h1>
+        <div class="input-section">
+            <select id="num1"></select>
+            <select id="num2"></select>
+            <select id="num3"></select>
+            <select id="num4"></select>
+            <button onclick="goToRoute()">Enter numbers</button>
+        </div>
+    </div>
+
+    <script>
+        function populateSelects() {
+            for (let i = 1; i <= 99; i++) {
+                const option = document.createElement('option');
+                option.value = i;
+                option.text = i;
+                document.getElementById('num1').add(option.cloneNode(true));
+                document.getElementById('num2').add(option.cloneNode(true));
+                document.getElementById('num3').add(option.cloneNode(true));
+                document.getElementById('num4').add(option.cloneNode(true));
+            }
+        }
+
+        populateSelects();
+    </script>
+
+    <script src="script.js"></script>
+</body>
+</html> -->
+
+
+
+
+
+
